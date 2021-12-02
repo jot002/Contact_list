@@ -51,14 +51,6 @@ public class ContactList {
             }
         }
         return rangedContacts.toArray(new Person[rangedContacts.size()]);
-//        Person[] reducedContacts = new Person[rangedContacts.size()];
-//        int i = 0;
-//        for (Person p : rangedContacts) {
-//            reducedContacts[i] = p;
-//            i++;
-//        }
-//        return reducedContacts;
-//        return null;
     }
 
     public boolean deleteContact(String name) {

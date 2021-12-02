@@ -33,7 +33,7 @@ public class Person {
     }
 
     public boolean deletePhoneNumber(String pn) {
-        if (this.phoneNumbers.size() == 1) {
+        if (this.phoneNumbers.size() < 1) {
             throw new IllegalArgumentException();
         }
         for (String num : this.phoneNumbers) {
