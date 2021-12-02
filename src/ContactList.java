@@ -9,7 +9,7 @@ public class ContactList {
 	
     public boolean createContact(Person person) {
         for (Person p : this.contactList) {
-            if (p.equals(person)) {
+            if (p.getName().equals(person.getName())) {
                 return false;
             }
         }
