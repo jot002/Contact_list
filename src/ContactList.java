@@ -3,9 +3,12 @@ import java.util.*;
 public class ContactList {
 	
 	// Add instance variables here
-    private ArrayList<Person> contactList = new ArrayList<Person>();
+    private ArrayList<Person> contactList;
     private int totalNum;
 
+    public ContactList() {
+        this.contactList = new ArrayList<Person>();
+    }
 	
     public boolean createContact(Person person) {
         for (Person p : this.contactList) {
