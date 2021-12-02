@@ -95,10 +95,10 @@ public class ContactList {
         Collections.sort(allNums);
         ArrayList<String> temp = new ArrayList<String>();
         for (String num : allNums) {
-            if (!allNums.contains(num)) {
-                allNums.add(num);
+            if (!temp.contains(num)) {
+                temp.add(num);
             }
         }
-        return allNums.toArray(new String[allNums.size()]);
+        return temp.toArray(new String[temp.size()]);
     }
 }
