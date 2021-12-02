@@ -62,13 +62,13 @@ public class ContactList {
     }
 
     public boolean deleteContact(String name) {
-//        for (Person p : this.contactList) {
-//            if (p.getName().equals(name)) {
-//                this.contactList.remove(p);
-//                this.totalNum--;
-//                return true;
-//            }
-//        }
+        for (Person p : this.contactList) {
+            if (p.getName().equals(name)) {
+                this.contactList.remove(p);
+                this.totalNum--;
+                return true;
+            }
+        }
         return false;
     }
 
