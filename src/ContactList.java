@@ -78,19 +78,20 @@ public class ContactList {
     }
 
     public String[] fetchAllPhoneNumbers() {
-        ArrayList<String> allNums = new ArrayList<String>();
-        for (Person p : this.contactList) {
-            for (String num : p.getPhoneNumbers()) {
-                allNums.add(num);
-            }
-        }
-        Collections.sort(allNums);
-        ArrayList<String> temp = new ArrayList<String>();
-        for (String num : allNums) {
-            if (!temp.contains(num)) {
-                temp.add(num);
-            }
-        }
-        return temp.toArray(new String[temp.size()]);
+//        ArrayList<String> allNums = new ArrayList<String>();
+//        for (Person p : this.contactList) {
+//            for (String num : p.getPhoneNumbers()) {
+//                allNums.add(num);
+//            }
+//        }
+//        Collections.sort(allNums);
+//        ArrayList<String> temp = new ArrayList<String>();
+//        for (String num : allNums) {
+//            if (!temp.contains(num)) {
+//                temp.add(num);
+//            }
+//        }
+//        return temp.toArray(new String[temp.size()]);
+        return null;
     }
 }
