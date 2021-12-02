@@ -40,19 +40,20 @@ public class ContactList {
         if (start.compareTo(end) > 0) {
             throw new IllegalArgumentException();
         }
-        ArrayList<Person> rangedContacts = new ArrayList<Person>;
+        ArrayList<Person> rangedContacts = new ArrayList<Person>();
         for (Person p : this.contactList) {
             if ((start.compareTo(p.getName()) <= 0) && (end.compareTo(p.getName()) > 0)) {
                 rangedContacts.add(p);
             }
         }
-        Person[] reducedContacts = new Person[rangedContacts.size()];
-        int i = 0;
-        for (Person p : rangedContacts) {
-            reducedContacts[i] = p;
-            i++;
-        }
-        return reducedContacts;
+        return rangedContacts.toArray(new Person[rangedContacts.size()]);
+//        Person[] reducedContacts = new Person[rangedContacts.size()];
+//        int i = 0;
+//        for (Person p : rangedContacts) {
+//            reducedContacts[i] = p;
+//            i++;
+//        }
+//        return reducedContacts;
     }
 
     public boolean deleteContact(String name) {
@@ -71,10 +72,28 @@ public class ContactList {
     }
 
     public String[] fetchAllNames() {
-
+        ArrayList<String> allNames = new ArrayList<String>();
+        for (Person p : this.contactList) {
+            allNames.add(p.getName());
+        }
+        Collections.sort(allNames);
+        return allNames.toArray(new String[allNames.size()]);
     }
 
     public String[] fetchAllPhoneNumbers() {
-        return null;
+        ArrayList<String> allNums = new ArrayList<String>();
+        for (Person p : this.contactList) {
+            for (String num : p.getPhoneNumbers()) {
+                allNums.add(num);
+            }
+        }
+        Collections.sort(allNums);
+        ArrayList<String> temp = new ArrayList<String>();
+        for (String num : allNums) {
+            if (!allNums.contains(num)) {
+                allNums.add(num);
+            }
+        }
+        return allNums.toArray(new String[allNums.size()]);
     }
 }
