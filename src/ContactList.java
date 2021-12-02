@@ -7,12 +7,13 @@ public class ContactList {
     private int totalNum;
 
     public ContactList() {
-        this.contactList = new ArrayList<>();
+        this.contactList = new ArrayList<Person>();
+        this.totalNum = 0;
     }
-	
+
     public boolean createContact(Person person) {
         for (Person p : this.contactList) {
-            if (p.getName().equals(person.getName())) {
+            if (p.getName().compareTo(person.getName()) == 0) {
                 return false;
             }
         }
