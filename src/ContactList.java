@@ -31,16 +31,16 @@ public class ContactList {
         return false;
     }
 
-//    public Person getContact(String name) {
-//        for (Person p : this.contactList) {
-//            if (p.getName().equals(name)) {
-//                return p;
-//            }
-//        }
-//        return null;
-//    }
+    public Person getContact(String name) {
+        for (Person p : this.contactList) {
+            if (p.getName().equals(name)) {
+                return p;
+            }
+        }
+        return null;
+    }
 
-//    public Person[] getContactByRange(String start, String end) {
+    public Person[] getContactByRange(String start, String end) {
 //        if (start.compareTo(end) > 0) {
 //            throw new IllegalArgumentException();
 //        }
@@ -58,9 +58,10 @@ public class ContactList {
 ////            i++;
 ////        }
 ////        return reducedContacts;
-//    }
+        return null;
+    }
 
-//    public boolean deleteContact(String name) {
+    public boolean deleteContact(String name) {
 //        for (Person p : this.contactList) {
 //            if (p.getName().equals(name)) {
 //                this.contactList.remove(p);
@@ -68,23 +69,24 @@ public class ContactList {
 //                return true;
 //            }
 //        }
-//        return false;
-//    }
-//
-//    public int size() {
-//        return this.totalNum;
-//    }
+        return false;
+    }
 
-//    public String[] fetchAllNames() {
+    public int size() {
+        return this.totalNum;
+    }
+
+    public String[] fetchAllNames() {
 //        ArrayList<String> allNames = new ArrayList<String>();
 //        for (Person p : this.contactList) {
 //            allNames.add(p.getName());
 //        }
 //        Collections.sort(allNames);
 //        return allNames.toArray(new String[allNames.size()]);
-//    }
-//
-//    public String[] fetchAllPhoneNumbers() {
+        return null;
+    }
+
+    public String[] fetchAllPhoneNumbers() {
 //        ArrayList<String> allNums = new ArrayList<String>();
 //        for (Person p : this.contactList) {
 //            for (String num : p.getPhoneNumbers()) {
@@ -99,5 +101,6 @@ public class ContactList {
 //            }
 //        }
 //        return allNums.toArray(new String[allNums.size()]);
-//    }
+        return null;
+    }
 }
