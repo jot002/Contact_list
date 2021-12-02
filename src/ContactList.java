@@ -41,24 +41,24 @@ public class ContactList {
     }
 
     public Person[] getContactByRange(String start, String end) {
-//        if (start.compareTo(end) > 0) {
-//            throw new IllegalArgumentException();
+        if (start.compareTo(end) > 0) {
+            throw new IllegalArgumentException();
+        }
+        ArrayList<Person> rangedContacts = new ArrayList<Person>();
+        for (Person p : this.contactList) {
+            if ((start.compareTo(p.getName()) <= 0) && (end.compareTo(p.getName()) > 0)) {
+                rangedContacts.add(p);
+            }
+        }
+        return rangedContacts.toArray(new Person[rangedContacts.size()]);
+//        Person[] reducedContacts = new Person[rangedContacts.size()];
+//        int i = 0;
+//        for (Person p : rangedContacts) {
+//            reducedContacts[i] = p;
+//            i++;
 //        }
-//        ArrayList<Person> rangedContacts = new ArrayList<Person>();
-//        for (Person p : this.contactList) {
-//            if ((start.compareTo(p.getName()) <= 0) && (end.compareTo(p.getName()) > 0)) {
-//                rangedContacts.add(p);
-//            }
-//        }
-//        return rangedContacts.toArray(new Person[rangedContacts.size()]);
-////        Person[] reducedContacts = new Person[rangedContacts.size()];
-////        int i = 0;
-////        for (Person p : rangedContacts) {
-////            reducedContacts[i] = p;
-////            i++;
-////        }
-////        return reducedContacts;
-        return null;
+//        return reducedContacts;
+//        return null;
     }
 
     public boolean deleteContact(String name) {
@@ -86,19 +86,20 @@ public class ContactList {
     }
 
     public String[] fetchAllPhoneNumbers() {
-        ArrayList<String> allNums = new ArrayList<String>();
-        for (Person p : this.contactList) {
-            for (String num : p.getPhoneNumbers()) {
-                allNums.add(num);
-            }
-        }
-        Collections.sort(allNums);
-        ArrayList<String> temp = new ArrayList<String>();
-        for (String num : allNums) {
-            if (!temp.contains(num)) {
-                temp.add(num);
-            }
-        }
-        return temp.toArray(new String[temp.size()]);
+//        ArrayList<String> allNums = new ArrayList<String>();
+//        for (Person p : this.contactList) {
+//            for (String num : p.getPhoneNumbers()) {
+//                allNums.add(num);
+//            }
+//        }
+//        Collections.sort(allNums);
+//        ArrayList<String> temp = new ArrayList<String>();
+//        for (String num : allNums) {
+//            if (!temp.contains(num)) {
+//                temp.add(num);
+//            }
+//        }
+//        return temp.toArray(new String[temp.size()]);
+        return null;
     }
 }
