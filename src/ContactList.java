@@ -77,13 +77,12 @@ public class ContactList {
     }
 
     public String[] fetchAllNames() {
-//        ArrayList<String> allNames = new ArrayList<String>();
-//        for (Person p : this.contactList) {
-//            allNames.add(p.getName());
-//        }
-//        Collections.sort(allNames);
-//        return allNames.toArray(new String[allNames.size()]);
-        return null;
+        ArrayList<String> allNames = new ArrayList<String>();
+        for (Person p : this.contactList) {
+            allNames.add(p.getName());
+        }
+        Collections.sort(allNames);
+        return allNames.toArray(new String[allNames.size()]);
     }
 
     public String[] fetchAllPhoneNumbers() {
