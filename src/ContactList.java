@@ -86,20 +86,19 @@ public class ContactList {
     }
 
     public String[] fetchAllPhoneNumbers() {
-//        ArrayList<String> allNums = new ArrayList<String>();
-//        for (Person p : this.contactList) {
-//            for (String num : p.getPhoneNumbers()) {
-//                allNums.add(num);
-//            }
-//        }
-//        Collections.sort(allNums);
-//        ArrayList<String> temp = new ArrayList<String>();
-//        for (String num : allNums) {
-//            if (!allNums.contains(num)) {
-//                allNums.add(num);
-//            }
-//        }
-//        return allNums.toArray(new String[allNums.size()]);
-        return null;
+        ArrayList<String> allNums = new ArrayList<String>();
+        for (Person p : this.contactList) {
+            for (String num : p.getPhoneNumbers()) {
+                allNums.add(num);
+            }
+        }
+        Collections.sort(allNums);
+        ArrayList<String> temp = new ArrayList<String>();
+        for (String num : allNums) {
+            if (!allNums.contains(num)) {
+                allNums.add(num);
+            }
+        }
+        return allNums.toArray(new String[allNums.size()]);
     }
 }
