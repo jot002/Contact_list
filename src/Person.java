@@ -10,7 +10,6 @@ public class Person {
 	public Person(String name, ArrayList<String> pnArray) {
         this.name = name;
         this.phoneNumbers = pnArray;
-
 	}
 	
     public String getName() {
@@ -18,10 +17,8 @@ public class Person {
     }
 
     public boolean addPhoneNumber(String pn) {
-        for (String num : this.phoneNumbers) {
-            if (num.equals(pn)) {
-                return false;
-            }
+        if (this.phoneNumbers.contains(pn)) {
+            return false;
         }
         this.phoneNumbers.add(pn);
         return true;
@@ -36,11 +33,9 @@ public class Person {
         if (this.phoneNumbers.size() == 1) {
             throw new IllegalArgumentException();
         }
-        for (String num : this.phoneNumbers) {
-            if (num.equals(pn)) {
-                this.phoneNumbers.remove(num);
-                return true;
-            }
+        if (this.phoneNumbers.contains(pn)) {
+            this.phoneNumbers.remove(pn);
+            return true;
         }
         return false;
     }

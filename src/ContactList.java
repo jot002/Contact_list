@@ -1,8 +1,8 @@
 import java.util.*;   
 
 public class ContactList {
-	
-	// Add instance variables here
+
+    // Add instance variables here
     private ArrayList<Person> contactList;
     private int totalNum;
 
@@ -81,9 +81,6 @@ public class ContactList {
         ArrayList<String> allNums = new ArrayList<String>();
         for (Person p : this.contactList) {
             allNums.addAll(p.getPhoneNumbers());
-//            for (String num : p.getPhoneNumbers()) {
-//                allNums.add(num);
-//            }
         }
         Collections.sort(allNums);
         ArrayList<String> temp = new ArrayList<String>();
@@ -95,3 +92,4 @@ public class ContactList {
         return temp.toArray(new String[temp.size()]);
     }
 }
+
