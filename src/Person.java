@@ -5,12 +5,12 @@ public class Person {
     // Add instance variables here
     private String name;
     private ArrayList<String> phoneNumbers;
-    private int totalNum;
+
 	
 	public Person(String name, ArrayList<String> pnArray) {
         this.name = name;
         this.phoneNumbers = pnArray;
-        this.totalNum = this.phoneNumbers.size();
+
 	}
 	
     public String getName() {
@@ -24,7 +24,6 @@ public class Person {
             }
         }
         this.phoneNumbers.add(pn);
-        this.totalNum++;
         return true;
     }
 
@@ -34,13 +33,13 @@ public class Person {
     }
 
     public boolean deletePhoneNumber(String pn) {
-        if (this.totalNum == 1) {
+        if (this.phoneNumbers.size() == 1) {
             throw new IllegalArgumentException();
         }
         for (String num : this.phoneNumbers) {
             if (num.equals(pn)) {
                 this.phoneNumbers.remove(num);
-                this.totalNum--;
+
                 return true;
             }
         }
