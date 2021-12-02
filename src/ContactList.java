@@ -22,15 +22,15 @@ public class ContactList {
         return true;
     }
 
-//    public boolean lookupContact(String name) {
-//        for (Person p : this.contactList) {
-//            if (p.getName().equals(name)) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-//
+    public boolean lookupContact(String name) {
+        for (Person p : this.contactList) {
+            if (p.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 //    public Person getContact(String name) {
 //        for (Person p : this.contactList) {
 //            if (p.getName().equals(name)) {
