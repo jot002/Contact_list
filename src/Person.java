@@ -30,13 +30,18 @@ public class Person {
     }
 
     public boolean deletePhoneNumber(String pn) {
-        if (this.phoneNumbers.size() == 1) {
-            throw new IllegalArgumentException();
+        if (this.phoneNumbers.size() > 1) {
+            if (this.phoneNumbers.contains(pn)) {
+                this.phoneNumbers.remove(pn);
+                return true;
+            }
+            return false;
+        } else {
+            if (!this.phoneNumbers.contains(pn)) {
+                return false;
+            } else {
+                throw new IllegalArgumentException();
+            }
         }
-        if (this.phoneNumbers.contains(pn)) {
-            this.phoneNumbers.remove(pn);
-            return true;
-        }
-        return false;
     }
 }
