@@ -3,7 +3,7 @@ import java.util.*;
 public class ContactList {
 	
 	// Add instance variables here
-    private ArrayList<Person> contactList;
+    private ArrayList<Person> contactList = new ArrayList<Person>();
     private int totalNum;
 
 	
