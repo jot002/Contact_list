@@ -7,7 +7,7 @@ public class ContactList {
     private int totalNum;
 
     public ContactList() {
-        this.contactList = new ArrayList<Person>();
+        this.contactList = new ArrayList<>();
     }
 	
     public boolean createContact(Person person) {
